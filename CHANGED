@@ -1,3 +1,7 @@
+0.46:
+- Fixed a bug regarding resource file paths (MarcP)
+- Added commandref stub to 01_YAF.pm (MarcP)
+
 0.45:
 - Added some Logs for debug (mangei.markus)
 
