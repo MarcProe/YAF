@@ -457,3 +457,31 @@ sub YAF_NotFound{
 }
 
 1;
+
+# Beginn der Commandref
+
+=pod
+=item helper
+=item summary YAF provides an interactive alternative to the floorplan module
+=item summary_DE YAF ist eine interaktive alternaitve zum floorplan Modul.
+
+=begin html
+
+<a name="YAF"></a>
+<b>Define</b>
+<ul>
+	<code>define yaf YAF</code>
+</ul>
+=end html
+
+=begin html_DE
+
+<a name="YAF"></a>
+<b>Define</b>
+<ul>
+	<code>define yaf YAF</code>
+</ul>
+=end html
+
+# Ende der Commandref
+=cut
