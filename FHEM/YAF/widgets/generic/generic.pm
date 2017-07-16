@@ -28,8 +28,9 @@ package main;
 
 use strict;
 use warnings;
+use vars qw($FW_ME);
 
-my $yaf_version = 0.41;
+my $yaf_version = 0.46;
 
 use vars qw(%_GET);
 use vars qw(%defs);
@@ -293,7 +294,7 @@ sub generic_get_state() {
 					my @keyval = split(/:/,$entry);
 					my $regex = $keyval[0];
 					if($state =~ m/$regex/) {
-						$iconpath = "/fhem/images/default/" . $keyval[1] . ".png";
+						$iconpath = "$FW_ME/images/default/" . $keyval[1] . ".png";
 					}
 				}
 				$ret[1] = $iconpath;
@@ -338,7 +339,7 @@ sub generic_on_click() {
 		if($clicklink ne "") {
 			if($clicklink eq "_detail") {
 				$ret[0] = "redirect";
-				$ret[1] = "/fhem?detail=" . $fhemname;
+				$ret[1] = "$FW_ME?detail=" . $fhemname;
 
 			} else {
 				$ret[0] = "redirect";
