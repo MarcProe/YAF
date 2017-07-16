@@ -27,26 +27,18 @@ package main;
 use strict;
 use warnings;
 
-my $yaf_version=0.45;
+my $yaf_version=0.46;
 
 my %fhemwidgets;
 my %fhemviews;
 my %fhemviewbgs;
 my $isInit = 0;
 
-#######################################################################################
-#
-# YAF_FHEMConfig - Initializes the module after loading the Website
-#				   Loads the distributed config from the devices
-#
-# no parameter
-#
-########################################################################################
-
 sub YAF_FHEMConfig { #this is called via ajax when the page is loaded.
 		#get the views
 		my $views = AttrVal("yaf","views",undef);
 		my $backgrounds = AttrVal("yaf", "backgrounds", undef);
+
 		if(defined $views and $isInit == 0) {
 			foreach my $view (split (/;/,$views)) {
 				my @aview = split(/,/,$view);
